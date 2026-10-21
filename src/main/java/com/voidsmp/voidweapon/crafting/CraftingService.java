@@ -334,7 +334,7 @@ public final class CraftingService implements Listener {
         catch (RuntimeException exception) { color = BarColor.PURPLE; }
         try { style = BarStyle.valueOf(plugin.getConfig().getString("crafting.bossbar.style", "SOLID").toUpperCase()); }
         catch (RuntimeException exception) { style = BarStyle.SOLID; }
-        BossBar bar = bossBars.computeIfAbsent(player.getUniqueId(), ignored -> Bukkit.createBossBar(title, color, style));
+        final String bossBarTitle = title; final BarColor bossBarColor = color; final BarStyle bossBarStyle = style; BossBar bar = bossBars.computeIfAbsent(player.getUniqueId(), ignored -> Bukkit.createBossBar(bossBarTitle, bossBarColor, bossBarStyle));
         bar.setTitle(title);
         bar.setProgress(progress);
         if (!bar.getPlayers().contains(player)) bar.addPlayer(player);
