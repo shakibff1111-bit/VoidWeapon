@@ -1,0 +1,29 @@
+name: VoidWeapon
+version: '${version}'
+main: com.voidsmp.voidweapon.VoidWeaponPlugin
+api-version: '26.3'
+authors: ["VOID SMP"]
+description: Legendary weapons and timed forge crafting for VOID SMP.
+commands:
+  voidweapon:
+    description: VOID WEAPON management and abilities.
+    usage: /voidweapon help
+  start:
+    description: Open the VOID WEAPON forge menu.
+    usage: /start
+permissions:
+  voidweapon.admin:
+    description: Full VOID WEAPON administration.
+    default: false
+  voidweapon.use:
+    description: Use custom weapons and abilities.
+    default: true
+  voidweapon.craft:
+    description: Use permitted forge crafting features.
+    default: true
+  voidweapon.recipe.unlock:
+    description: Unlock recipes for yourself where permitted.
+    default: false
+  voidweapon.trust:
+    description: Manage trust for a forge you own.
+    default: false
